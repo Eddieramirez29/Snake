@@ -10,7 +10,7 @@ function movement()
     snake.style.left = posX + 'px';
     snake.style.top = posY + 'px';
 
-    posX = posX + 10;
+    posX = posX + 1;
 }
 
 document.addEventListener('keydown', function(event) 
@@ -19,7 +19,7 @@ document.addEventListener('keydown', function(event)
     if (event.key === 'Enter') 
     { 
         //delay 500 ms
-       setInterval(movement, 500);
+       setInterval(movement, 5);
     }
 });
 
