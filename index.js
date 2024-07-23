@@ -4,8 +4,6 @@ let posX = 376;
 let posY = 159;
 
 let intervalId = 0
-
-
 //This funcion simulates movement of the sanek
 function movement()
 {
@@ -26,16 +24,21 @@ function restartPosition()
 
 document.addEventListener('keydown', function(event) 
 {
+    
     //When clicking "Enter" key, the game will start
     if (event.key === 'Enter') 
     { 
-        //delay 500 ms
-        intervalId = setInterval(movement, 5);
+        //delay 5 ms
+        // Prevent multiple intervals
+        if (intervalId === 0) {
+            intervalId = setInterval(movement, 5);
+        }
     }
     //Restart to initial position
     else if (event.key === 'r' || event.key === 'R') 
-            { 
+            {
                 clearInterval(intervalId);//Stop snake
+                intervalId = 0
                 restartPosition();
             }
 });
