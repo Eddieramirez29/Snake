@@ -14,18 +14,15 @@ function movement()
     {
         case 'right':
             posX += 1;
-            posY += 0;
             break;
         case 'left':
             posX -= 1;
             break;
         case 'up':
             posY -= 1;
-            posX += 0;
             break;
         case 'down':
             posY += 1;
-            posX += 0;
             break;
     }
     snake.style.left = posX + 'px';
@@ -50,7 +47,8 @@ document.addEventListener('keydown', function(event)
     { 
         //delay 5 ms
         // Prevent multiple intervals
-        if (intervalId === 0) {
+        if (intervalId === 0) 
+        {
             intervalId = setInterval(movement, 50);
         }
     }
@@ -78,7 +76,3 @@ document.addEventListener('keydown', function(event)
                 direction = 'down';
             }
 });
-
-
-
-
