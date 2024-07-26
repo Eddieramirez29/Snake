@@ -1,7 +1,10 @@
 const snake = document.getElementById('snake');
-//Initial position for the "snake"
+//Initial position for the "snake" superior izquierda
 let posX = 376;
 let posY = 159;
+
+snake.style.left = posX + 'px';
+snake.style.top = posY + 'px';
 
 //Initial direction
 let direction = 'right';
@@ -25,8 +28,27 @@ function movement()
             posY += 1;
             break;
     }
+
     snake.style.left = posX + 'px';
     snake.style.top = posY + 'px';
+
+    if(posX >= 960)
+    {
+        alert("You collided!!!")
+    }
+    else if(posX <= 376)
+    {
+        alert("You collided!!!")
+    }
+    else if(posY >= 443)
+    {
+        alert("You collided!!!")
+    }
+    else if(posY < 159)
+    {
+        alert("You collided!!!")
+    }
+
 
 }
 
@@ -49,7 +71,7 @@ document.addEventListener('keydown', function(event)
         // Prevent multiple intervals
         if (intervalId === 0) 
         {
-            intervalId = setInterval(movement, 50);
+            intervalId = setInterval(movement, 20);
         }
     }
     //Restart to initial position
