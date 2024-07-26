@@ -3,6 +3,9 @@ const snake = document.getElementById('snake');
 let posX = 376;
 let posY = 159;
 
+//Initial speed
+let speed = 10;
+
 snake.style.left = posX + 'px';
 snake.style.top = posY + 'px';
 
@@ -32,24 +35,20 @@ function movement()
     snake.style.left = posX + 'px';
     snake.style.top = posY + 'px';
 
-    if(posX >= 960)
-    {
-        alert("You collided!!!")
-    }
-    else if(posX <= 376)
-    {
-        alert("You collided!!!")
-    }
-    else if(posY >= 443)
-    {
-        alert("You collided!!!")
-    }
-    else if(posY < 159)
-    {
-        alert("You collided!!!")
-    }
+    checkCollision();
+}
 
-
+// Function to check for collisions
+function checkCollision() 
+{
+    if(posX > 960 || posX < 376 || posY > 443 || posY < 159) 
+    {
+        alert("You collided!!!");
+        clearInterval(intervalId);
+        intervalId = 0;
+        restartPosition();
+        direction = 'right'; // Reset direction to 'right' after collision
+    }
 }
 
 //This funcion restarts to initial position
@@ -71,7 +70,7 @@ document.addEventListener('keydown', function(event)
         // Prevent multiple intervals
         if (intervalId === 0) 
         {
-            intervalId = setInterval(movement, 20);
+            intervalId = setInterval(movement, speed);
         }
     }
     //Restart to initial position
@@ -98,3 +97,23 @@ document.addEventListener('keydown', function(event)
                 direction = 'down';
             }
 });
+
+
+/**Next code is only for note and future use
+ * //Initial position for the "snake" superior izquierda
+let posX = 376;
+let posY = 159;
+
+//Initial position for the "snake" inferior izquierda
+let posX = 376;
+let posY = 443;
+
+//Initial position for the "snake" superior derecha
+let posX = 960;
+let posY = 159;
+
+//Initial position for the "snake" inferior derecha
+let posX = 960;
+let posY = 443;
+
+ */
