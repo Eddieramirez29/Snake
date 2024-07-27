@@ -1,6 +1,7 @@
 //Variables for colors
 //Background colors
-$gameBackground: greenyellow;
+$gameBackground: #8da259;
+$snakeColor: #2c311d;
 
 body
 {
@@ -26,13 +27,13 @@ body
     width: 600px;
     height: 300px;
     background-color: $gameBackground;
-    border: 10px solid gray;
+    border: 10px solid $snakeColor;
 }
 
 .snake {
     width: 15px;
     height: 15px;
-    background-color: blue;
+    background-color: $snakeColor;
     border-radius: 50%;
     position: absolute;
 }
