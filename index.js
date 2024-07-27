@@ -80,6 +80,7 @@ document.addEventListener('keydown', function(event)
     else if (event.key === 'r' || event.key === 'R') 
             {
                 clearInterval(intervalId);//Stop snake
+                resetTimer(); //Call to reset Timer
                 intervalId = 0
                 restartPosition();
             }
@@ -104,12 +105,7 @@ document.addEventListener('keydown', function(event)
 // Function to trigger the timer reset event
 function resetTimer()
 {
-    const event = new CustomEvent('resetTimer');
-    document.dispatchEvent(event);
-    if (timerInterval) 
-        {
-          clearInterval(timerInterval);
-        }
+    clearInterval(timerInterval);
     timerElement.textContent = "00:00:00";
 }
 
