@@ -38,8 +38,9 @@ function movement()
     checkCollision();
 }
 
+
 // Function to check for collisions
-function checkCollision() 
+function checkCollision()
 {
     if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
     {
@@ -48,6 +49,7 @@ function checkCollision()
         intervalId = 0;
         restartPosition();
         direction = 'right'; // Reset direction to 'right' after collision
+        resetTimer();
     }
 }
 
@@ -98,6 +100,18 @@ document.addEventListener('keydown', function(event)
                 direction = 'down';
             }
 });
+
+// Function to trigger the timer reset event
+function resetTimer()
+{
+    const event = new CustomEvent('resetTimer');
+    document.dispatchEvent(event);
+    if (timerInterval) 
+        {
+          clearInterval(timerInterval);
+        }
+    timerElement.textContent = "00:00:00";
+}
 
 
 /**Next code is only for note and future use
