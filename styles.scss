@@ -2,6 +2,11 @@
 //Background colors
 $gameBackground: #8da259;
 $snakeColor: #2c311d;
+//border-radius
+$border-radius: 10px;
+//sizes for little boxes
+$width: 150px;
+$height: 50px;
 
 body
 {
@@ -18,8 +23,10 @@ body
     top: 89px;
     left: 373px;
     background-color: $gameBackground;
-    width: 150px;
+    width: $width;
+    height: $height;
     font-weight: bolder;
+    border-radius: $border-radius;
 }
 
 #main
@@ -37,3 +44,16 @@ body
     border-radius: 50%;
     position: absolute;
 }
+
+.container
+ {
+    position: absolute;
+    left: 844px;
+    top:89px;
+    text-align: center;
+    background-color: $gameBackground;
+    border-radius: $border-radius;
+    width: $width;
+    height: $height;
+    font-weight: bolder;
+  }

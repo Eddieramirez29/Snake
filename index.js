@@ -4,7 +4,7 @@ let posX = 384;
 let posY = 150;
 
 //Initial speed
-let speed = 10;
+let speed = 1;
 
 snake.style.left = posX + 'px';
 snake.style.top = posY + 'px';
@@ -43,7 +43,7 @@ function checkCollision()
 {
     if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
     {
-        alert("You collided!!!");
+        alert("You lost!!!");
         clearInterval(intervalId);
         intervalId = 0;
         restartPosition();
