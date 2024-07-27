@@ -102,19 +102,19 @@ document.addEventListener('keydown', function(event)
 
 /**Next code is only for note and future use
  * //Initial position for the "snake" superior izquierda
-let posX = 376;
-let posY = 159;
+let posX = 384;
+let posY = 150;
 
 //Initial position for the "snake" inferior izquierda
-let posX = 376;
-let posY = 443;
+let posX = 384;
+let posY = 433;
 
 //Initial position for the "snake" superior derecha
-let posX = 960;
-let posY = 159;
+let posX = 967;
+let posY = 150;
 
 //Initial position for the "snake" inferior derecha
-let posX = 960;
-let posY = 443;
+let posX = 967;
+let posY = 433;
 
  */
