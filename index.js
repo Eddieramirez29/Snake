@@ -44,6 +44,7 @@ function checkCollision()
 {
     if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
     {
+        audioCollision.play();
         alert("You lost!!!");
         clearInterval(intervalId);
         intervalId = 0;
