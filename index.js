@@ -1,7 +1,7 @@
 const snake = document.getElementById('snake');
 //Initial position for the "snake" superior izquierda
-let posX = 376;
-let posY = 159;
+let posX = 384;
+let posY = 150;
 
 //Initial speed
 let speed = 10;
@@ -41,7 +41,7 @@ function movement()
 // Function to check for collisions
 function checkCollision() 
 {
-    if(posX > 960 || posX < 376 || posY > 443 || posY < 159) 
+    if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
     {
         alert("You collided!!!");
         clearInterval(intervalId);
@@ -54,8 +54,9 @@ function checkCollision()
 //This funcion restarts to initial position
 function restartPosition()
 {
-    posX = 376;
-    posY = 159;
+    posX = 384;
+    posY = 150;
+
     snake.style.left = posX + 'px';
     snake.style.top = posY + 'px';
 }
