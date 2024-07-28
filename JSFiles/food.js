@@ -16,11 +16,19 @@ function getRandomPositionY(min, max)
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let PositionX = getRandomPositionX(minX, maxX); // Ejemplo: número entre 384 y 967
-let PositionY = getRandomPositionY(minY, maxY); // Ejemplo: número entre 150 y 433
+document.addEventListener('keydown', function(event) 
+{
+    
+    //When clicking "Enter" key, the game will start
+    if (event.key === 'Enter') 
+    {
+        let PositionX = getRandomPositionX(minX, maxX); // Ejemplo: número entre 384 y 967
+        let PositionY = getRandomPositionY(minY, maxY); // Ejemplo: número entre 150 y 433
 
-food.style.left = PositionX + 'px';
-food.style.top = PositionY + 'px';
+        food.style.left = PositionX + 'px';
+        food.style.top = PositionY + 'px';
+    }
+});
 
 
 

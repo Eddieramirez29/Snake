@@ -6,6 +6,7 @@ let posY = 150;
 //Initial speed
 let speed = 10;
 
+
 snake.style.left = posX + 'px';
 snake.style.top = posY + 'px';
 
@@ -66,18 +67,19 @@ function restartPosition()
     snake.style.top = posY + 'px';
 }
 
-document.addEventListener('keydown', function(event) 
+document.addEventListener('keydown', function(event)
 {
     
     //When clicking "Enter" key, the game will start
-    if (event.key === 'Enter') 
-    { 
+    if (event.key === 'Enter')
+    {
         //delay 5 ms
         // Prevent multiple intervals
         if (intervalId === 0) 
         {
             intervalId = setInterval(movement, speed);
         }
+
     }
     //Restart to initial position
     else if (event.key === 'r' || event.key === 'R') 
