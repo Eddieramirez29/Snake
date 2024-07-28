@@ -9,6 +9,7 @@ let speed = 1;
 snake.style.left = posX + 'px';
 snake.style.top = posY + 'px';
 
+
 //Initial direction
 let direction = 'right';
 
@@ -44,13 +45,14 @@ function checkCollision()
 {
     if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
     {
+        resetTimer(); //Call to reset Timer
         audioCollision.play();
+        audio.pause();
         alert("You lost!!!");
         clearInterval(intervalId);
         intervalId = 0;
         restartPosition();
         direction = 'right'; // Reset direction to 'right' after collision
-        resetTimer();
     }
 }
 
@@ -84,6 +86,7 @@ document.addEventListener('keydown', function(event)
                 resetTimer(); //Call to reset Timer
                 intervalId = 0
                 restartPosition();
+                audio.pause();
             }
     else if (event.key === 'ArrowRight') 
             {

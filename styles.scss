@@ -45,8 +45,9 @@ body
     position: absolute;
 }
 
+
 .container
- {
+{
     position: absolute;
     left: 844px;
     top:89px;
@@ -56,4 +57,13 @@ body
     width: $width;
     height: $height;
     font-weight: bolder;
-  }
+}
+
+#food
+{
+    width: 15px;
+    height: 15px;
+    background-color: wheat;
+    border-radius: 50%;
+    position: absolute;
+}
