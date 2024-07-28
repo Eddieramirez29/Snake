@@ -4,7 +4,7 @@ let posX = 384;
 let posY = 150;
 
 //Initial speed
-let speed = 1;
+let speed = 10;
 
 snake.style.left = posX + 'px';
 snake.style.top = posY + 'px';

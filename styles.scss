@@ -4,9 +4,13 @@ $gameBackground: #8da259;
 $snakeColor: #2c311d;
 //border-radius
 $border-radius: 10px;
+$border-radius-items: 20%;
 //sizes for little boxes
 $width: 150px;
 $height: 50px;
+//Sizes for elements
+$width-snake: 20px;
+$height-snake: 20px;
 
 body
 {
@@ -37,13 +41,23 @@ body
     border: 10px solid $snakeColor;
 }
 
-.snake {
-    width: 15px;
-    height: 15px;
+.snake, #food
+{
+    width: $width-snake;
+    height: $height-snake;
     background-color: $snakeColor;
-    border-radius: 50%;
+    border-radius: $border-radius-items;
     position: absolute;
 }
+
+// #food
+// {
+//     width: $width-snake;
+//     height: $height-snake;
+//     background-color: wheat;
+//     border-radius: $border-radius-items;
+//     position: absolute;
+// }
 
 
 .container
@@ -57,13 +71,4 @@ body
     width: $width;
     height: $height;
     font-weight: bolder;
-}
-
-#food
-{
-    width: 15px;
-    height: 15px;
-    background-color: wheat;
-    border-radius: 50%;
-    position: absolute;
 }
