@@ -3,8 +3,10 @@ const snake = document.getElementById('snake');
 let posX = 384;
 let posY = 150;
 
-//Initial speed
-let speed = 10;
+//Initial speed by time
+let speed = 20;
+//Initial speed by space
+let speed2 = 1;
 
 
 snake.style.left = posX + 'px';
@@ -21,16 +23,16 @@ function movement()
     switch(direction) 
     {
         case 'right':
-            posX += 1;
+            posX += speed2;
             break;
         case 'left':
-            posX -= 1;
+            posX -= speed2;
             break;
         case 'up':
-            posY -= 1;
+            posY -= speed2;
             break;
         case 'down':
-            posY += 1;
+            posY += speed2;
             break;
     }
 
@@ -38,6 +40,7 @@ function movement()
     snake.style.top = posY + 'px';
 
     checkCollision();
+    eatFood();
 }
 
 
@@ -113,6 +116,14 @@ function resetTimer()
 {
     clearInterval(timerInterval);
     timerElement.textContent = "00:00:00";
+}
+// Function to check if the snake has eaten the food
+function eatFood() {
+    if (parseInt(snake.style.left) === parseInt(food.style.left) && parseInt(snake.style.top) === parseInt(food.style.top)) {
+        alert("eaten!");
+
+        // Add code to increase the size of the snake or update the score
+    }
 }
 
 
