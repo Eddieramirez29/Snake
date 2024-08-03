@@ -1,12 +1,12 @@
 const snake = document.getElementById('snake');
 //Initial position for the "snake" superior izquierda
-let posX = 384;
+let posX = 385;
 let posY = 150;
 
 //Initial speed by time
-let speed = 20;
+let speed = 100;
 //Initial speed by space
-let speed2 = 1;
+let speed2 = 5;
 
 
 snake.style.left = posX + 'px';
@@ -47,7 +47,7 @@ function movement()
 // Function to check for collisions
 function checkCollision()
 {
-    if(posX > 967 || posX < 384 || posY > 433 || posY < 150) 
+    if(posX > 970 || posX < 380 || posY > 420 || posY < 150) 
     {
         resetTimer(); //Call to reset Timer
         audioCollision.play();

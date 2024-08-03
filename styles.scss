@@ -9,8 +9,8 @@ $border-radius-items: 20%;
 $width: 150px;
 $height: 50px;
 //Sizes for elements
-$width-snake: 25px;
-$height-snake: 25px;
+$width-snake: 10px;
+$height-snake: 10px;
 
 body
 {
@@ -49,16 +49,6 @@ body
     border-radius: $border-radius-items;
     position: absolute;
 }
-
-// #food
-// {
-//     width: $width-snake;
-//     height: $height-snake;
-//     background-color: wheat;
-//     border-radius: $border-radius-items;
-//     position: absolute;
-// }
-
 
 .container
 {

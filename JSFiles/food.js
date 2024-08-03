@@ -1,8 +1,8 @@
 const food = document.getElementById('food');
 
 //Minimum and maximum values for X and Y positions
-let minX = 384, maxX = 967;
-let minY = 150, maxY = 433;
+let minX = 385, maxX = 970;
+let minY = 150, maxY = 420;
 
 
 
